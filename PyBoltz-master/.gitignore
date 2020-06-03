@@ -1,0 +1,9 @@
+venv/*
+*.hdf5
+*.pyc
+.idea
+*~
+*.o
+*.so
+*.c
+*.html
