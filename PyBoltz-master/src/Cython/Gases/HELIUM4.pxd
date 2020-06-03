@@ -1,2 +1,2 @@
 from Gas cimport Gas
-cdef void Gas3(Gas* object)
+cdef void Gas_helium4(Gas* object)
