@@ -1,3 +1,3 @@
 from Gas cimport Gas
 
-cdef void Gas5(Gas*object)
+cdef void Gas_neon(Gas*object)

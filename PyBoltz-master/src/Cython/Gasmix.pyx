@@ -1,64 +1,64 @@
-from Gases.CF4 cimport Gas1
-from Gases.ARGON cimport Gas2
-from Gases.HELIUM4 cimport Gas3
-from Gases.HELIUM3 cimport Gas4
-from Gases.NEON cimport Gas5
-from Gases.KRYPTON cimport Gas6
-from Gases.XENON cimport Gas7
-from Gases.CH4 cimport Gas8
-from Gases.ETHANE cimport Gas9
-from Gases.PROPANE cimport Gas10
-from Gases.ISOBUTANE cimport Gas11
-from Gases.CO2 cimport Gas12
-from Gases.H2O cimport Gas14
-from Gases.OXYGEN cimport Gas15
-from Gases.NITROGEN cimport Gas16
-from Gases.HYDROGEN cimport Gas21
-from Gases.DEUTERIUM cimport Gas22
-from Gases.DME cimport Gas25
-from Gases.XENONMERT cimport Gas61
+from Gases.CF4 cimport Gas_cf4
+from Gases.ARGON cimport Gas_argon
+from Gases.HELIUM4 cimport Gas_helium4
+from Gases.HELIUM3 cimport Gas_helium3
+from Gases.NEON cimport Gas_neon
+from Gases.KRYPTON cimport Gas_krypton
+from Gases.XENON cimport Gas_xenon
+from Gases.CH4 cimport Gas_ch4
+from Gases.ETHANE cimport Gas_ethane
+from Gases.PROPANE cimport Gas_propane
+from Gases.ISOBUTANE cimport Gas_isobutane
+from Gases.CO2 cimport Gas_co2
+from Gases.H2O cimport Gas_h2o
+from Gases.OXYGEN cimport Gas_oxygen
+from Gases.NITROGEN cimport Gas_nitrogen
+from Gases.HYDROGEN cimport Gas_hydrogen
+from Gases.DEUTERIUM cimport Gas_deuterium
+from Gases.DME cimport Gas_DME
+from Gases.XENONMERT cimport Gas_xenonmert
 from libc.string cimport memset
 from Gas cimport Gas
 
 cdef void callGASF(Gas*GAS, Params):
     if GAS.GasNumber == 1:
-        Gas1(GAS)
+        Gas_cf4(GAS)
     elif GAS.GasNumber == 2:
-        Gas2(GAS)
+        Gas_argon(GAS)
     elif GAS.GasNumber == 3:
-        Gas3(GAS)
+        Gas_helium4(GAS)
     elif GAS.GasNumber == 4:
-        Gas4(GAS)
+        Gas_helium3(GAS)
     elif GAS.GasNumber == 5:
-        Gas5(GAS)
+        Gas_neon(GAS)
     elif GAS.GasNumber == 6:
-        Gas6(GAS)
+        Gas_krypton(GAS)
     elif GAS.GasNumber == 7:
-        Gas7(GAS)
+        Gas_xenon(GAS)
     elif GAS.GasNumber == 8:
-        Gas8(GAS)
+        Gas_ch4(GAS)
     elif GAS.GasNumber == 9:
-        Gas9(GAS)
+        Gas_ethane(GAS)
     elif GAS.GasNumber == 10:
-        Gas10(GAS)
+        Gas_propane(GAS)
     elif GAS.GasNumber == 11:
-        Gas11(GAS)
+        Gas_isobutane(GAS)
     elif GAS.GasNumber == 12:
-        Gas12(GAS)
+        Gas_co2(GAS)
     elif GAS.GasNumber == 14:
-        Gas14(GAS)
+        Gas_h2o(GAS)
     elif GAS.GasNumber == 15:
-        Gas15(GAS)
+        Gas_oxygen(GAS)
     elif GAS.GasNumber == 16:
-        Gas16(GAS)
+        Gas_nitrogen(GAS)
     elif GAS.GasNumber == 21:
-        Gas21(GAS)
+        Gas_hydrogen(GAS)
     elif GAS.GasNumber == 22:
-        Gas22(GAS)
+        Gas_deuterium(GAS)
     elif GAS.GasNumber == 25:
-        Gas25(GAS)
+        Gas_DME(GAS)
     elif GAS.GasNumber == 61:
-        Gas61(GAS, Params['A'], Params['D'], Params['F'], Params['A1'], Params['Lambda'], Params['EV0'])
+        Gas_xenonmert(GAS, Params['A'], Params['D'], Params['F'], Params['A1'], Params['Lambda'], Params['EV0'])
 
 cdef class Gasmix:
     """

@@ -14,7 +14,7 @@ import cython
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.fast_getattr(True)
-cdef void Gas22(Gas*object):
+cdef void Gas_deuterium(Gas*object):
     """
     This function is used to calculate the needed momentum cross sections for Deuterium gas.
     """
@@ -24,36 +24,36 @@ cdef void Gas22(Gas*object):
     cdef double XROT5[30],YROT5[30],XVIB1[35],YVIB1[35],XVIB2[35],YVIB2[35],XVIB3[16],YVIB3[16],XVIB4[16],YVIB4[16],XEXC1[20],YEXC1[20],
     cdef double XEXC2[23],YEXC2[23],XATT[18],YATT[18],XION[72],YION[72]
 
-    XEN=gd['gas22/XEN']
-    YXSEC=gd['gas22/YXSEC']
-    XROT0=gd['gas22/XROT0']
-    YROT0=gd['gas22/YROT0']
-    XROT1=gd['gas22/XROT1']
-    YROT1=gd['gas22/YROT1']
-    XROT2=gd['gas22/XROT2']
-    YROT2=gd['gas22/YROT2']
-    XROT3=gd['gas22/XROT3']
-    YROT3=gd['gas22/YROT3']
-    XROT4=gd['gas22/XROT4']
-    YROT4=gd['gas22/YROT4']
-    XROT5=gd['gas22/XROT5']
-    YROT5=gd['gas22/YROT5']
-    XVIB1=gd['gas22/XVIB1']
-    YVIB1=gd['gas22/YVIB1']
-    XVIB2=gd['gas22/XVIB2']
-    YVIB2=gd['gas22/YVIB2']
-    XVIB3=gd['gas22/XVIB3']
-    YVIB3=gd['gas22/YVIB3']
-    XVIB4=gd['gas22/XVIB4']
-    YVIB4=gd['gas22/YVIB4']
-    XEXC1=gd['gas22/XEXC1']
-    YEXC1=gd['gas22/YEXC1']
-    XEXC2=gd['gas22/XEXC2']
-    YEXC2=gd['gas22/YEXC2']
-    XATT=gd['gas22/XATT']
-    YATT=gd['gas22/YATT']
-    XION=gd['gas22/XION']
-    YION=gd['gas22/YION']
+    XEN=gd['gas_deuterium/XEN']
+    YXSEC=gd['gas_deuterium/YXSEC']
+    XROT0=gd['gas_deuterium/XROT0']
+    YROT0=gd['gas_deuterium/YROT0']
+    XROT1=gd['gas_deuterium/XROT1']
+    YROT1=gd['gas_deuterium/YROT1']
+    XROT2=gd['gas_deuterium/XROT2']
+    YROT2=gd['gas_deuterium/YROT2']
+    XROT3=gd['gas_deuterium/XROT3']
+    YROT3=gd['gas_deuterium/YROT3']
+    XROT4=gd['gas_deuterium/XROT4']
+    YROT4=gd['gas_deuterium/YROT4']
+    XROT5=gd['gas_deuterium/XROT5']
+    YROT5=gd['gas_deuterium/YROT5']
+    XVIB1=gd['gas_deuterium/XVIB1']
+    YVIB1=gd['gas_deuterium/YVIB1']
+    XVIB2=gd['gas_deuterium/XVIB2']
+    YVIB2=gd['gas_deuterium/YVIB2']
+    XVIB3=gd['gas_deuterium/XVIB3']
+    YVIB3=gd['gas_deuterium/YVIB3']
+    XVIB4=gd['gas_deuterium/XVIB4']
+    YVIB4=gd['gas_deuterium/YVIB4']
+    XEXC1=gd['gas_deuterium/XEXC1']
+    YEXC1=gd['gas_deuterium/YEXC1']
+    XEXC2=gd['gas_deuterium/XEXC2']
+    YEXC2=gd['gas_deuterium/YEXC2']
+    XATT=gd['gas_deuterium/XATT']
+    YATT=gd['gas_deuterium/YATT']
+    XION=gd['gas_deuterium/XION']
+    YION=gd['gas_deuterium/YION']
 
     cdef double PJ[7],B0,FROT[8],Sum
     cdef int i,j,k,I,J,NL
@@ -115,7 +115,7 @@ cdef void Gas22(Gas*object):
 
     object.EOBY[0] = 8.3
 
-    object.EnergyLevels = gd['gas22/EnergyLevels']
+    object.EnergyLevels = gd['gas_deuterium/EnergyLevels']
 
     cdef double EN
 

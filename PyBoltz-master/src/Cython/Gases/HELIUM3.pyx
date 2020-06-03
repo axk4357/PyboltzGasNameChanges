@@ -14,7 +14,7 @@ import cython
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.fast_getattr(True)
-cdef void Gas4(Gas*object):
+cdef void Gas_helium3(Gas*object):
     """
     This function is used to calculate the needed momentum cross sections for Helium4 gas.
     """

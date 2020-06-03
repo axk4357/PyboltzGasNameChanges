@@ -26,3 +26,4 @@ Extension("*",["*.pyx"],include_dirs=[numpy.get_include(),'.'])
       )
 '''
 setup(ext_modules=cythonize(ext_modules))
+print("Everything ran successfully!")
